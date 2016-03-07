@@ -1,0 +1,16 @@
+lazy val root = (project in file(".")).
+  settings(
+    name := "modeling_yuqi",
+    version := "1.0",
+    libraryDependencies  ++= Seq(
+            "org.scalanlp" %% "breeze" % "0.10"
+            // native libraries greatly improve performance, but increase jar sizes.
+            "org.scalanlp" %% "breeze-natives" % "0.10"
+    )
+
+    resolvers ++= Seq(
+            // other resolvers here
+            "Sonatype Releases" at "https://oss.sonatype.org/content/repositories/releases/"
+    )
+    scalaVersion := "2.10.4"
+  )
